@@ -1,0 +1,123 @@
+/* .cover {
+    height: 400px;
+    width: 292px;
+    transform: rotateY(10deg);
+    position: relative;
+}
+
+.spine {
+    height: 400px;
+    width: 80px;
+    background-color: #acacac;
+    position: absolute;
+    right: -80px;
+    border-left: 1px solid #8b8b8b;
+}
+
+.spine-title {
+    width: 200px;
+    height: 80px;
+    transform: translate(-40%,-50%) rotate(-90deg);
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.spine-logo {
+    height: 60px;
+    width: 60px;
+    background-image: url('../img/logos/pico-star.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}*/
+
+#proxima .front {
+    background-image: url('../img/covers/proxima.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#proxima .back {
+    /* background-color: #bbb; */
+}
+
+
+.container {
+  width: 292px;
+  height: 400px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-70%);
+  -webkit-perspective: 1000;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+}
+
+.box figure {
+  display: block;
+  position: absolute;
+  border: 2px solid black;
+}
+.box .front,
+.box .back {
+  width: 292px;
+  height: 400px;
+}
+.box .right,
+.box .left {
+  width: 100px;
+  height: 400px;
+  left: 100px;
+  background-color: #bbb;
+}
+.box .top,
+.box .bottom {
+  width: 292px;
+  height: 100px;
+}
+
+.box .top {
+    top: 48px;
+}
+
+.box .bottom {
+    top: 45px;
+}
+
+/* .cube .front { -webkit-transform: rotateY(0deg); }
+.cube .back { -webkit-transform: rotateX(180deg); }
+.cube .right { -webkit-transform: rotateY(90deg); }
+.cube .left { -webkit-transform: rotateY(-90deg); }
+.cube .top { -webkit-transform: rotateX(90deg); }
+.cube .bottom { -webkit-transform: rotateX(-90deg); } */
+
+.box .front { -webkit-transform: rotateY(0deg) translateZ(50px); }
+.box .back { -webkit-transform: rotateX(180deg) translateZ(52px); }
+.box .right { -webkit-transform: rotateY(90deg) translateZ(144px); }
+.box .left { -webkit-transform: rotateY(-90deg) translateZ(152px); }
+.box .top { -webkit-transform: rotateX(90deg) translateZ(100px); }
+.box .bottom { -webkit-transform: rotateX(-90deg) translateZ(304px); }
+
+.box.show-front { -webkit-transform: translateZ(-50px) rotateY(0deg); }
+.box.show-back { -webkit-transform: translateZ(-50px) translateX(84px) rotateY(180deg); }
+.box.show-right { -webkit-transform: translateZ(-150px) rotateY(-90deg); }
+.box.show-left { -webkit-transform: translateZ(-150px) rotateY(90deg); }
+.box.show-top { -webkit-transform: translateZ(-100px) rotateX(-90deg); }
+.box.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); }
+
+.box { -webkit-transform: translateZ(-100px); }
+.box { -webkit-transition: -webkit-transform 1s; }
