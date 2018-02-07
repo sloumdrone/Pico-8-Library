@@ -13,11 +13,25 @@ function init() {
         revertDuration: 800,
         stack: '.sp',
         cancel: '.noDragTemp',
-        start: function(){
-            $('.dropbox').fadeIn('slow');
-        },
+        snap: '.snapTarget',
+        snapmode: 'both',
+        snapTolerance: 50,
+        scroll: false
+    });
+
+    $("section.container").draggable({
+        revert: 'valid',
+        revertDuration: 800,
+        stack: '.sp',
+        scroll: false,
+        distance: 50,
         stop: function(){
-            $('.dropbox').fadeOut('fast');
+            $('section.container').attr('style','');
+            $('.'+currentFocus).attr('style','display: none; position: relative;')
+            $('.'+currentFocus).fadeIn('fast');
+            $('.box-spines .sp').removeClass('noDragTemp');
+            $('.rotation').fadeOut('fast');
+
         }
     });
 
@@ -30,6 +44,7 @@ function init() {
             $('#'+currentFocus).fadeIn('slow');
             $('.dropbox').fadeOut('fast');
             $('.box-spines .sp').addClass('noDragTemp');
+            $('.rotation').fadeIn('slow');
         }
     });
 
@@ -40,6 +55,17 @@ function init() {
         $('.'+currentFocus).fadeIn('fast');
         $('.box-spines .sp').removeClass('noDragTemp');
         // currentFocus = null;
+    });
+
+    $('.sp').mouseenter(function(){
+        if (!$(this).hasClass('noDragTemp')){
+            $('.dropbox').fadeIn('slow');
+            $('.box').attr('class','box show-front');
+        }
+    });
+
+    $('.play-box').on('click',function(){
+        $('#play-container').slideDown(2000,'swing');
     })
 }
 
