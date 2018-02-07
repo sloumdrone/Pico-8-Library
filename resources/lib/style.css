@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: linear-gradient(to bottom right, black 0.5%, red 99.5%);
+    background: linear-gradient(-199deg, red 0.5%, black 99.5%);
     height: 100vh;
 
 }
@@ -19,6 +19,7 @@ body {
     left: 10%;
     bottom: 15%;
     box-sizing: border-box;
+    z-index: 30;
 }
 
 .sp {
@@ -30,7 +31,41 @@ body {
     border: 2px solid #8f8f8f;
     padding: 0;
     margin: 0;
-    position: relative;
+    cursor: move;
+    user-select: none;
+    z-index: 0;
+    transform: translateY(0px);
+    border-radius: 3px;
+    bottom: 0;
+}
+
+/* .sp.lostgems {
+    position: absolute;
+    left: 100px;
+}
+
+.sp.isola {
+    position: absolute;
+    left: 200px;
+}
+
+.sp.sbatfp {
+    position: absolute;
+    left: 300px;
+}
+
+.sp.alleycat {
+    position: absolute;
+    left: 400px;
+} */
+
+
+.sp:not(.noDragTemp):hover {
+    transform: translateY(-30px);
+}
+
+.noDragTemp {
+    cursor: not-allowed;
 }
 
 .sp-txt {
@@ -44,6 +79,8 @@ body {
     transform: translate(50%,50%) rotateZ(-90deg);
     width: 350px;
     text-shadow: 2px 2px 10px #202020;
+    /* cursor: move; */
+    user-select: none;
 }
 
 #sticker {
@@ -68,6 +105,49 @@ body {
     left: 20px;
 }
 
+#shelf {
+    width: 90%;
+    height: 5%;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background-image: url('../img/other/shelf.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 30px 50px black;
+}
+
+section {
+    display: none;
+}
+
+
+
+.dropbox {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 292px;
+    height: 400px;
+    display: none;
+    border: 2px dashed rgba(255,255,0,0.5);
+}
+
+
+.dropbox span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    transform: translate(-50%,-50%);
+    color: rgba(255,255,0,0.5);
+    font-family: monospace;
+    font-size: 50px;
+}
+
+
+/* ------------------------------------------ */
+
 #proxima .front {
     background-image: url('../img/covers/proxima.jpg');
     background-repeat: no-repeat;
@@ -75,9 +155,10 @@ body {
 }
 
 #proxima .back {
-    background-color: #bbb;
+    background-image: url('../img/covers/proximab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 
 #alleycat .front {
@@ -87,10 +168,49 @@ body {
 }
 
 #alleycat .back {
+    background-image: url('../img/covers/alleycatb.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#isola .front {
+    background-image: url('../img/covers/isola.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#isola .back {
+    background-image: url('../img/covers/isolab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#lostgems .front {
+    background-image: url('../img/covers/lostgems.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lostgems .spine-right {
+    transform: translate(-17%,355%) rotateZ(-90deg);
+}
+
+#lostgems .back {
     background-color: #bbb;
 }
 
-#alleycat, #proxima {
+#sbatfp .front {
+    background-image: url('../img/covers/sbatfp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sbatfp .back {
+    background-color: #bbb;
+}
+
+#alleycat, #proxima, #isola, #lostgems, #sbatfp {
     display: none;
 }
 
@@ -100,11 +220,11 @@ body {
   width: 292px;
   height: 400px;
   position: absolute;
-  bottom: 40%;
-  left: 50%;
-  transform: translateX(-70%);
+  top: 10%;
+  right: 13%;
+  /* transform: translateX(-70%); */
   -webkit-perspective: 1000;
-  cursor: pointer;
+  z-index: 1000;
 }
 
 .box {
@@ -118,20 +238,21 @@ body {
   display: block;
   position: absolute;
   border: 2px solid #8f8f8f;
+  cursor: pointer;
 }
 .box .front,
 .box .back {
   width: 292px;
   height: 400px;
+
 }
-.box .right,
-.box .left {
+.box .right {
   width: 100px;
   height: 400px;
-  left: 100px;
+  left: 98px;
   background-color: #bbb;
 }
-.box .top,
+/* .box .top,
 .box .bottom {
   width: 292px;
   height: 100px;
@@ -139,12 +260,13 @@ body {
 }
 
 .box .top {
-    top: 48px;
+    top: 50px;
 }
 
 .box .bottom {
     top: 45px;
-}
+} */
+
 
 /* .cube .front { -webkit-transform: rotateY(0deg); }
 .cube .back { -webkit-transform: rotateX(180deg); }
@@ -154,24 +276,24 @@ body {
 .cube .bottom { -webkit-transform: rotateX(-90deg); } */
 
 .box .front { -webkit-transform: rotateY(0deg) translateZ(50px); }
-.box .back { -webkit-transform: rotateX(180deg) translateZ(52px); }
-.box .right { -webkit-transform: rotateY(90deg) translateZ(144px); }
-.box .left { -webkit-transform: rotateY(-90deg) translateZ(152px); }
+.box .back { -webkit-transform: rotateX(180deg) translateZ(50px); }
+.box .right { -webkit-transform: rotateY(90deg) translateZ(143px); }
+/* .box .left { -webkit-transform: rotateY(-90deg) translateZ(152px); }
 .box .top { -webkit-transform: rotateX(90deg) translateZ(100px); }
-.box .bottom { -webkit-transform: rotateX(-90deg) translateZ(304px); }
+.box .bottom { -webkit-transform: rotateX(-90deg) translateZ(304px); } */
 
 .box.show-front { -webkit-transform: translateZ(-50px) rotateY(0deg); }
-.box.show-back { -webkit-transform: translateZ(-50px) translateX(84px) rotateY(180deg); }
+.box.show-back { -webkit-transform: translateZ(-50px) translateX(82px) rotateY(180deg); }
 .box.show-right { -webkit-transform: translateZ(-150px) rotateY(-90deg); }
-.box.show-left { -webkit-transform: translateZ(-150px) rotateY(90deg); }
+/* .box.show-left { -webkit-transform: translateZ(-150px) rotateY(90deg); }
 .box.show-top { -webkit-transform: translateZ(-100px) rotateX(-90deg); }
-.box.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); }
+.box.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); } */
 
 .box { -webkit-transform: translateZ(-100px); }
 .box { -webkit-transition: -webkit-transform 1s; }
 
 
-.spine-right, .spine-left {
+.spine-right {
     font-family: 'Days One', sans-serif;
     font-size: 40px;
     color: antiquewhite;
@@ -182,17 +304,4 @@ body {
     transform: translate(-17%,259%) rotateZ(-90deg);
     width: 300px;
     text-shadow: 2px 2px 10px #202020;
-}
-
-
-#shelf {
-    width: 90%;
-    height: 5%;
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    background-image: url('../img/other/shelf.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0px 30px 50px black;
 }

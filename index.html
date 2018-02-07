@@ -3,26 +3,98 @@
     <head>
         <meta charset="utf-8">
         <title>Pico-8 Library</title>
-        <link rel="stylesheet" href="./resources/lib/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/lib/style.css">
+        <link type="text/css" href="./resources/lib/jquery-ui.min.css" rel="Stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script type="text/javascript" src="./resources/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./resources/lib/main.js"></script>
     </head>
     <body>
-        <!-- <div class="cover" id="proxima">
-            <div class="spine">
-                <div class="spine-title">PROXIMA-B</div>
+        <div id="sticker"></div>
+        <div class="box-spines">
+            <div class="sp proxima">
+                <div class="sp-txt">PROXIMA-B</div>
                 <div class="spine-logo"></div>
             </div>
-        </div> -->
+            <div class="sp lostgems">
+                <div class="sp-txt" style="font-size: 30px;">THE LOST GEMS</div>
+                <div class="spine-logo"></div>
+            </div>
+            <div class="sp isola">
+                <div class="sp-txt">ISOLA</div>
+                <div class="spine-logo"></div>
+            </div>
+            <div class="sp sbatfp">
+                <div class="sp-txt">S.B.A.T.F +</div>
+                <div class="spine-logo"></div>
+            </div>
+            <div class="sp alleycat">
+                <div class="sp-txt">ALLEY CAT</div>
+                <div class="spine-logo"></div>
+            </div>
+        </div>
 
+        <div class="dropbox">
+            <span>Drop Here</span>
+        </div>
 
         <section class="container" id="proxima">
             <div class="box show-front">
-                <figure class="front">1</figure>
-                <figure class="back">2</figure>
-                <figure class="right">3</figure>
-                <figure class="left">4</figure>
-                <figure class="top">5</figure>
-                <figure class="bottom">6</figure>
+                <figure class="front"></figure>
+                <figure class="back"></figure>
+                <figure class="right">
+                    <div class="spine-right">PROXIMA-B</div>
+                    <div class="spine-logo"></div>
+                </figure>
             </div>
         </section>
+
+        <section class="container" id="alleycat">
+            <div class="box show-front">
+                <figure class="front"></figure>
+                <figure class="back"></figure>
+                <figure class="right">
+                    <div class="spine-right">ALLEY CAT</div>
+                    <div class="spine-logo"></div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="container" id="sbatfp">
+            <div class="box show-front">
+                <figure class="front"></figure>
+                <figure class="back"></figure>
+                <figure class="right">
+                    <div class="spine-right">S.B.A.T.F +</div>
+                    <div class="spine-logo"></div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="container" id="isola">
+            <div class="box show-front">
+                <figure class="front"></figure>
+                <figure class="back"></figure>
+                <figure class="right">
+                    <div class="spine-right">ISOLA</div>
+                    <div class="spine-logo"></div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="container" id="lostgems">
+            <div class="box show-front">
+                <figure class="front"></figure>
+                <figure class="back"></figure>
+                <figure class="right">
+                    <div class="spine-right" style="font-size: 30px;">THE LOST GEMS</div>
+                    <div class="spine-logo"></div>
+                </figure>
+            </div>
+        </section>
+
+
+        <div id="shelf"></div>
     </body>
 </html>
