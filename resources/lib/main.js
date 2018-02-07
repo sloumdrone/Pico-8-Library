@@ -35,10 +35,11 @@ function init() {
 
     $('figure').on('dblclick',function(){
         $(this).parent().parent().fadeOut('slow');
-        $('.'+currentFocus).attr('style','display: none;')
+        $('.box').attr('class','box show-front')
+        $('.'+currentFocus).attr('style','display: none; position: relative;')
         $('.'+currentFocus).fadeIn('fast');
         $('.box-spines .sp').removeClass('noDragTemp');
-        currentFocus = null;
+        // currentFocus = null;
     })
 }
 
