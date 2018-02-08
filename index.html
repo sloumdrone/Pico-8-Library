@@ -12,122 +12,157 @@
         <script type="text/javascript" src="./resources/lib/main.js"></script>
     </head>
     <body>
-        <!-- <div class="page-container"> -->
+        <div id="play-container">
+            <div class="note">
+                <div class="pin"></div>
 
-
-            <div id="play-container">
-                <div class="note">
-                    <div class="pin"></div>
-                    <div class="list">
-                        <ol>
-                            Controls:<br /><br />
-                            <li>X &amp; Z (action)</li>
-                            <li>Arrows (movement)</li>
-                            <li>Enter (pause/menu)</li>
-                        </ol>
-                    </div>
+                <div class="list">
+                    <ol>
+                        Controls:<br /><br />
+                        <li>X &amp; Z (action)</li>
+                        <li>Arrows (movement)</li>
+                        <li>Enter (pause/menu)</li>
+                    </ol>
                 </div>
-                <iframe id="gamescreen" src="./resources/pico/placeholder.html" width="512" height="536"></iframe>
-                <div id="topshelf"></div>
-                <div class="tobottomshelf"></div>
             </div>
-            <div id="cart-container">
-                <div class="play-box"></div>
-                <div id="sticker"></div>
-                <div class="box-spines">
-                    <div class="sp proxima">
-                        <div class="sp-txt">PROXIMA-B</div>
-                        <div class="spine-logo"></div>
-                    </div>
-                    <div class="sp lostgems">
-                        <div class="sp-txt" style="font-size: 30px;">THE LOST GEMS</div>
-                        <div class="spine-logo"></div>
-                    </div>
-                    <div class="sp isola">
-                        <div class="sp-txt">ISOLA</div>
-                        <div class="spine-logo"></div>
-                    </div>
-                    <div class="sp sbatfp">
-                        <div class="sp-txt">S.B.A.T.F +</div>
-                        <div class="spine-logo"></div>
-                    </div>
-                    <div class="sp alleycat">
-                        <div class="sp-txt">ALLEY CAT</div>
-                        <div class="spine-logo"></div>
-                    </div>
+
+            <iframe id="gamescreen" src="./resources/pico/placeholder.html" width="512" height="536"></iframe>
+
+            <div id="topshelf"></div>
+
+            <div class="tobottomshelf"></div>
+        </div>
+
+        <div id="cart-container">
+            <div class="play-box"></div>
+
+            <div id="sticker"></div>
+
+            <div class="box-spines">
+                <div class="sp proxima">
+                    <div class="sp-txt">PROXIMA-B</div>
+                    <div class="spine-logo"></div>
                 </div>
 
-                <div class="dropbox">
-                    <span>Drag &amp; Drop Here</span>
-                    <div class="snapTarget"></div>
-                </div>
-                <div class="rotation">
-                    <p>
-                        Click box to rotate
-                    </p>
-
+                <div class="sp lostgems">
+                    <div class="sp-txt" style="font-size: 30px;">THE LOST GEMS</div>
+                    <div class="spine-logo"></div>
                 </div>
 
-                <section class="container" id="proxima">
-                    <div class="box show-front">
-                        <figure class="front"></figure>
-                        <figure class="back"></figure>
-                        <figure class="right">
-                            <div class="spine-right">PROXIMA-B</div>
-                            <div class="spine-logo"></div>
-                        </figure>
-                    </div>
+                <div class="sp isola">
+                    <div class="sp-txt">ISOLA</div>
+                    <div class="spine-logo"></div>
+                </div>
 
-                </section>
+                <div class="sp sbatfp">
+                    <div class="sp-txt">S.B.A.T.F +</div>
+                    <div class="spine-logo"></div>
+                </div>
 
-                <section class="container" id="alleycat">
-                    <div class="box show-front">
-                        <figure class="front"></figure>
-                        <figure class="back"></figure>
-                        <figure class="right">
-                            <div class="spine-right">ALLEY CAT</div>
-                            <div class="spine-logo"></div>
-                        </figure>
-                    </div>
-                </section>
-
-                <section class="container" id="sbatfp">
-                    <div class="box show-front">
-                        <figure class="front"></figure>
-                        <figure class="back"></figure>
-                        <figure class="right">
-                            <div class="spine-right">S.B.A.T.F +</div>
-                            <div class="spine-logo"></div>
-                        </figure>
-                    </div>
-                </section>
-
-                <section class="container" id="isola">
-                    <div class="box show-front">
-                        <figure class="front"></figure>
-                        <figure class="back"></figure>
-                        <figure class="right">
-                            <div class="spine-right">ISOLA</div>
-                            <div class="spine-logo"></div>
-                        </figure>
-                    </div>
-                </section>
-
-                <section class="container" id="lostgems">
-                    <div class="box show-front">
-                        <figure class="front"></figure>
-                        <figure class="back"></figure>
-                        <figure class="right">
-                            <div class="spine-right" style="font-size: 30px;">THE LOST GEMS</div>
-                            <div class="spine-logo"></div>
-                        </figure>
-                    </div>
-                </section>
-
-
-                <div id="shelf"></div>
-
+                <div class="sp alleycat">
+                    <div class="sp-txt">ALLEY CAT</div>
+                    <div class="spine-logo"></div>
+                </div>
             </div>
-        <!-- </div> -->
+
+            <div class="dropbox">
+                <span>Drag &amp; Drop Here</span>
+                <div class="snapTarget"></div>
+            </div>
+
+            <div class="rotation">
+                <p>
+                    Click box to rotate
+                </p>
+            </div>
+
+            <section class="container" id="proxima">
+                <div class="box show-front">
+                    <figure class="front"></figure>
+                    <figure class="back"></figure>
+                    <figure class="right">
+                        <div class="spine-right">PROXIMA-B</div>
+                        <div class="spine-logo"></div>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="container" id="alleycat">
+                <div class="box show-front">
+                    <figure class="front"></figure>
+                    <figure class="back"></figure>
+                    <figure class="right">
+                        <div class="spine-right">ALLEY CAT</div>
+                        <div class="spine-logo"></div>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="container" id="sbatfp">
+                <div class="box show-front">
+                    <figure class="front"></figure>
+                    <figure class="back"></figure>
+                    <figure class="right">
+                        <div class="spine-right">S.B.A.T.F +</div>
+                        <div class="spine-logo"></div>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="container" id="isola">
+                <div class="box show-front">
+                    <figure class="front"></figure>
+                    <figure class="back"></figure>
+                    <figure class="right">
+                        <div class="spine-right">ISOLA</div>
+                        <div class="spine-logo"></div>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="container" id="lostgems">
+                <div class="box show-front">
+                    <figure class="front"></figure>
+                    <figure class="back"></figure>
+                    <figure class="right">
+                        <div class="spine-right" style="font-size: 30px;">THE LOST GEMS</div>
+                        <div class="spine-logo"></div>
+                    </figure>
+                </div>
+            </section>
+
+            <div id="shelf"></div>
+            <span class="about">About</span>
+        </div>
+
+        <div id="about-container">
+            <div class="about-box">
+                <h2>About</h2>
+                <p>This site was developed by <a href="https://brianmevans.com" target="_blank">Brian Evans</a> as a display and presentation vehicle for his web design, as well as his Pico-8 games. The site was coded with HTML5, CSS3, and JavaScript (utilizing jQuery and jQueryUI).</p>
+
+                <h3>Usage</h3>
+                <p>Hopefully the site is reasonably intuitive to navigate. If not, here are some tips: Drag a game box from the shelf to the drop zone. You can then click on the cover to rotate to the back and check out the box art. To put the cartridge back on the shelf, simply drag it and drop it back on the shelf. You may only have one cartridge out at a time, so you will not be able to drag more cartridges until you put the one you are looking at back where it goes. We keep a tidy house here! Once you have found a cartridge that you would like to play, click the play button (which becomes available upon looking at the cover of a cartridge). Clicking play will move you up a shelf to the game area. There is a post it note showing you the controls and a few toggles for sound, pause and reset. If your key commands do not register (they should, but you never know) try clicking onto the game screen and then entering key commands. When you are done playing, click the down arrow to return to the game shelf. You will find that the game you were playing has been put away for you and you may select a new game.</p>
+
+                <h3>Pico-8</h3>
+                <p><a href="https://www.lexaloffle.com/pico-8.php" target="_blank">Pico-8</a> is a virtual game console (sometimes refered to as a fantasy game console). It has strict limitations mimicking an older computer such as a Commodore64. There are 16 colors available, limited memory, and limited sound capabilities. I have found that these limitations make it a very fun system to program for! The games themselves are coded in a special version of <a href="https://www.lua.org/" target="_blank">Lua</a> embedded into the Pico-8 for game scripting. Games can be played natively, in the Pico-8 software or exported as:
+                <p>
+                    PNG Cartridges (Loadable by Pico-8) / JavaScript (Used on this site for gameplay) / System binaries for Windows, OSX, and Linux
+                </p>
+
+                <h2>Downloads</h2>
+                <ul>
+                    <li>Proxima-B: PNG / OS X / Linux / Windows</li>
+
+                    <li>The Lost Gems: PNG / OS X / Linux / Windows</li>
+
+                    <li>Isola: PNG / OS X / Linux / Windows</li>
+
+                    <li>Super Battle Arena Tank Fighter +: PNG / OS X / Linux / Windows</li>
+
+                    <li>Alley Cat: PNG / OS X / Linux / Windows</li>
+                </ul>
+            </div>
+            <span class="home">Home</span>
+        </div>
     </body>
 </html>

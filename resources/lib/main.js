@@ -1,7 +1,5 @@
 $(document).ready(init);
 
-
-
 function init() {
     var currentFocus = '';
     var dropped = false;
@@ -48,15 +46,6 @@ function init() {
         }
     });
 
-    // $('figure').on('dblclick',function(){
-    //     $(this).parent().parent().fadeOut('slow');
-    //     $('.box').attr('class','box show-front')
-    //     $('.'+currentFocus).attr('style','display: none; position: relative;')
-    //     $('.'+currentFocus).fadeIn('fast');
-    //     $('.box-spines .sp').removeClass('noDragTemp');
-    //     // currentFocus = null;
-    // });
-
     $('.sp').mouseenter(function(){
         if (!$(this).hasClass('noDragTemp')){
             $('.dropbox').fadeIn('slow');
@@ -82,6 +71,14 @@ function init() {
         $('#play-container').css({'top':'-100vh'});
         $('#gamescreen').attr('src','./resources/pico/placeholder.html');
     });
+
+    $('.about').on('click',function(){
+        $('#about-container').slideDown('slow');
+    });
+
+    $('.home').on('click',function(){
+        $('#about-container').slideUp('slow');
+    })
 }
 
 
