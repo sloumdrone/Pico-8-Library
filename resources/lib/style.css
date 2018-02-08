@@ -314,7 +314,8 @@ section {
 /* ------------------------------------------ */
 
 #cart-container {
-    position: relative;
+    position: absolute;
+    top: 0;
     display: block;
     width: 100vw;
     height: 100vh;
@@ -323,30 +324,92 @@ section {
     margin: 0;
     /* background: linear-gradient(-199deg, red 0.5%, black 99.5%); */
     background-color: darkred;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
-#play-container {
+/* #page-container {
     position: relative;
-    display: none;
+} */
+
+/*------------------------------------*/
+
+#play-container {
+    position: absolute;
+    display: block;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     padding: 0;
     margin: 0;
     background-color: darkred;
+    top: -100vh;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
     /* background: linear-gradient(-199deg, red 33.5%, black 111%); */
     /* background: linear-gradient(-199deg, red 69.5%, black 182%); */
 }
 
-#page-container {
-    position: relative;
+
+#topshelf {
+    width: 90%;
+    height: 5%;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background-image: url('../img/other/shelf.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 30px 30px 50px black;
 }
 
-
-.stuff {
+#gamescreen {
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 30px;
-    color: black;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 32px solid #2d2a2a;
+    box-sizing: content-box;
+    box-shadow: 0px 30px 90px black;
+    border-radius: 10px;
+}
+
+.note {
+    width: 200px;
+    height: 200px;
+    transform: rotateZ(-20deg);
+    background-color: lightyellow;
+    font-size: 20px;
+    font-family: 'Reenie Beanie', cursive;
+    color: red;
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    box-shadow: -2px 2px 10px black;
+}
+
+.list ol, .list ol li {
+    font-size: 26px;
+    font-family: 'Reenie Beanie', cursive;
+    color: red;
+}
+
+.tobottomshelf {
+    background-image: url('../img/other/downarrow.png');
+    border-radius: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 1000;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.tobottomshelf:hover {
+    opacity: 0.9;
 }

@@ -48,14 +48,14 @@ function init() {
         }
     });
 
-    $('figure').on('dblclick',function(){
-        $(this).parent().parent().fadeOut('slow');
-        $('.box').attr('class','box show-front')
-        $('.'+currentFocus).attr('style','display: none; position: relative;')
-        $('.'+currentFocus).fadeIn('fast');
-        $('.box-spines .sp').removeClass('noDragTemp');
-        // currentFocus = null;
-    });
+    // $('figure').on('dblclick',function(){
+    //     $(this).parent().parent().fadeOut('slow');
+    //     $('.box').attr('class','box show-front')
+    //     $('.'+currentFocus).attr('style','display: none; position: relative;')
+    //     $('.'+currentFocus).fadeIn('fast');
+    //     $('.box-spines .sp').removeClass('noDragTemp');
+    //     // currentFocus = null;
+    // });
 
     $('.sp').mouseenter(function(){
         if (!$(this).hasClass('noDragTemp')){
@@ -65,8 +65,17 @@ function init() {
     });
 
     $('.play-box').on('click',function(){
-        $('#play-container').slideDown(2000,'swing');
-    })
+        $('#cart-container').css({'top':'100vh'});
+        $('#play-container').css({'top':'0'});
+        $('#gamescreen').attr('src','./resources/pico/'+currentFocus+'.html').focus();
+
+    });
+
+    $('.tobottomshelf').on('click',function(){
+        $('#cart-container').css({'top':'0'});
+        $('#play-container').css({'top':'-100vh'});
+        $('#gamescreen').attr('src','./resources/pico/placeholder.html');
+    });
 }
 
 

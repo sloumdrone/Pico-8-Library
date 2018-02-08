@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Pico-8 Library</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
         <link rel="stylesheet" href="./resources/lib/style.css">
         <link type="text/css" href="./resources/lib/jquery-ui.min.css" rel="Stylesheet">
@@ -13,13 +12,24 @@
         <script type="text/javascript" src="./resources/lib/main.js"></script>
     </head>
     <body>
-        <div class="page-container">
+        <!-- <div class="page-container"> -->
 
 
             <div id="play-container">
-                <div class="stuff" id="anchor">
-                    stuff stuff stuff
+                <div class="note">
+                    <div class="pin"></div>
+                    <div class="list">
+                        <ol>
+                            Controls:<br /><br />
+                            <li>X &amp; Z (action)</li>
+                            <li>Arrows (movement)</li>
+                            <li>Enter (pause/menu)</li>
+                        </ol>
+                    </div>
                 </div>
+                <iframe id="gamescreen" src="./resources/pico/isola.html" width="512" height="536"></iframe>
+                <div id="topshelf"></div>
+                <div class="tobottomshelf"></div>
             </div>
             <div id="cart-container">
                 <div id="sticker"></div>
@@ -119,6 +129,6 @@
                 <div id="shelf"></div>
 
             </div>
-        </div>
+        <!-- </div> -->
     </body>
 </html>
