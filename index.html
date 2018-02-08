@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Pico-8 Library</title>
-        <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Days+One|Rammetto+One|Reenie+Beanie" rel="stylesheet">
         <link rel="stylesheet" href="./resources/lib/style.css">
         <link type="text/css" href="./resources/lib/jquery-ui.min.css" rel="Stylesheet">
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <script type="text/javascript" src="./resources/lib/jquery-ui.min.js"></script>
+        <script src="./resources/lib/jquery.ui.touch-punch.min.js"></script>
         <script type="text/javascript" src="./resources/lib/main.js"></script>
     </head>
     <body>
@@ -27,11 +27,12 @@
                         </ol>
                     </div>
                 </div>
-                <iframe id="gamescreen" src="./resources/pico/isola.html" width="512" height="536"></iframe>
+                <iframe id="gamescreen" src="./resources/pico/placeholder.html" width="512" height="536"></iframe>
                 <div id="topshelf"></div>
                 <div class="tobottomshelf"></div>
             </div>
             <div id="cart-container">
+                <div class="play-box"></div>
                 <div id="sticker"></div>
                 <div class="box-spines">
                     <div class="sp proxima">
@@ -64,9 +65,7 @@
                     <p>
                         Click box to rotate
                     </p>
-                    <div class="play-box">
-                        PLAY!
-                    </div>
+
                 </div>
 
                 <section class="container" id="proxima">

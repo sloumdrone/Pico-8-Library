@@ -3,7 +3,7 @@ $(document).ready(init);
 
 
 function init() {
-    var currentFocus = null;
+    var currentFocus = '';
     var dropped = false;
 
     $('section').on('click','.box figure',rotateBox);
@@ -30,7 +30,7 @@ function init() {
             $('.'+currentFocus).attr('style','display: none; position: relative;')
             $('.'+currentFocus).fadeIn('fast');
             $('.box-spines .sp').removeClass('noDragTemp');
-            $('.rotation').fadeOut('fast');
+            $('.rotation, .play-box').fadeOut(1000);
 
         }
     });
@@ -44,7 +44,7 @@ function init() {
             $('#'+currentFocus).fadeIn('slow');
             $('.dropbox').fadeOut('fast');
             $('.box-spines .sp').addClass('noDragTemp');
-            $('.rotation').fadeIn('slow');
+            $('.rotation, .play-box').fadeIn(1700);
         }
     });
 
@@ -67,11 +67,17 @@ function init() {
     $('.play-box').on('click',function(){
         $('#cart-container').css({'top':'100vh'});
         $('#play-container').css({'top':'0'});
-        $('#gamescreen').attr('src','./resources/pico/'+currentFocus+'.html').focus();
+        let link = currentFocus || 'placeholder'
+        $('#gamescreen').attr('src','./resources/pico/'+link+'.html').focus();
 
     });
 
     $('.tobottomshelf').on('click',function(){
+        $('section.container').attr('style','');
+        $('.'+currentFocus).attr('style','display: none; position: relative;')
+        $('.'+currentFocus).fadeIn('fast');
+        $('.box-spines .sp').removeClass('noDragTemp');
+        $('.rotation, .play-box').fadeOut('fast');
         $('#cart-container').css({'top':'0'});
         $('#play-container').css({'top':'-100vh'});
         $('#gamescreen').attr('src','./resources/pico/placeholder.html');
