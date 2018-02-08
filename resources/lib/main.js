@@ -42,7 +42,7 @@ function init() {
             $('#'+currentFocus).fadeIn('slow');
             $('.dropbox').fadeOut('fast');
             $('.box-spines .sp').addClass('noDragTemp');
-            $('.rotation, .play-box').fadeIn(1700);
+            $('.rotation, .play-box').fadeIn(1000);
         }
     });
 
@@ -73,11 +73,11 @@ function init() {
     });
 
     $('.about').on('click',function(){
-        $('#about-container').slideDown('slow');
+        $('#about-container').show('clip', 1000);
     });
 
     $('.home').on('click',function(){
-        $('#about-container').slideUp('slow');
+        $('#about-container').hide('clip', 1000);
     })
 }
 

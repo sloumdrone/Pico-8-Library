@@ -449,6 +449,10 @@ section {
     font-size: inherit;
 }
 
+b {
+    font-size: inherit;
+}
+
 .about-box {
     background-color: antiquewhite;
     height: 100%;
