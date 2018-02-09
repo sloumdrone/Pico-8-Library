@@ -261,12 +261,21 @@ section {
   border: 2px solid #8f8f8f;
   cursor: pointer;
 }
+
 .box .front,
 .box .back {
   width: 292px;
   height: 400px;
-
 }
+
+.box .top,
+.box .bottom {
+  width: 292px;
+  height: 100px;
+  top: 50px;
+  background-color: #bbb;
+}
+
 .box .right,
 .box .left {
   width: 100px;
@@ -279,6 +288,8 @@ section {
 .box .back { -webkit-transform: rotateX(180deg) translateZ(50px); }
 .box .right { -webkit-transform: rotateY(90deg) translateZ(143px); }
 .box .left { -webkit-transform: rotateY(-90deg) translateZ(147px); }
+.box .top { -webkit-transform: rotateX(90deg) translateZ(99px); }
+.box .bottom { -webkit-transform: rotateX(-90deg) translateZ(299px); }
 
 .box.show-front { -webkit-transform: translateZ(-50px) rotateY(0deg); }
 .box.show-back { -webkit-transform: translateZ(-50px) translateX(82px) rotateY(180deg); }
@@ -286,13 +297,10 @@ section {
 
 .box {
     -webkit-transform: translateZ(-100px);
-    -ms-transform: translateZ(-100px);
-    -moz-transform: translateZ(-100px);
 }
-.box { 
+
+.box {
     -webkit-transition: -webkit-transform 1s;
-    -ms-transition: -webkit-transform 1s;
-    -moz-transition: -webkit-transform 1s;
 }
 
 
