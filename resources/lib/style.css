@@ -428,7 +428,7 @@ section {
     font-size: 18px;
     color: #3a3535;
     display: none;
-    z-index: 999;
+    z-index: 9999;
     font-family: sans-serif;
 }
 
