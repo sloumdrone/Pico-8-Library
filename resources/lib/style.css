@@ -370,6 +370,7 @@ section {
     box-sizing: content-box;
     box-shadow: 30px 30px 50px black;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .note {
