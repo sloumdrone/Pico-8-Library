@@ -54,10 +54,12 @@ function init() {
     });
 
     $('.play-box').on('click',function(){
-        $('#cart-container').css({'top':'100vh'});
-        $('#play-container').css({'top':'0'});
         let link = currentFocus || 'placeholder'
         $('#gamescreen').attr('src','./resources/pico/'+link+'.html').focus();
+        $('#cart-container').css({'top':'100vh'});
+        $('#play-container').css({'top':'0'});
+
+
 
     });
 
