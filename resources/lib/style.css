@@ -301,7 +301,7 @@ section {
     text-shadow: 2px 2px 10px #202020;
 }
 
-.spine-left {
+.spine-fix {
     transform: translate(-17%,350%) rotateZ(-90deg);
 }
 
