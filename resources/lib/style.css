@@ -149,7 +149,7 @@ section {
     background-image: url('../img/other/uparrow.png');
     border-radius: 10px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 250px;
     height: 100px;
@@ -157,13 +157,15 @@ section {
     top: 10%;
     left: 14%;
     z-index: 1000;
-    opacity: 0.75;
+    opacity: 0.8;
     cursor: pointer;
     display: none;
+    border: 3px solid yellow;
 }
 
 .play-box:hover {
-    opacity: 0.9;
+    opacity: 0.95;
+    border: 3px solid gold;
 }
 
 /* ------------------------------------------ */
